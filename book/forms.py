@@ -1,7 +1,7 @@
 from django import forms
-from book.models import Book
+from book.models import Schedule
 
-class BookForm(forms.ModelForm):
+class ScheduleForm(forms.ModelForm):
     class Meta:
-        model = Book
+        model = Schedule
         fields = ('title', 'date', 'professor', 'grade', 'meo', 'schedule_type', )

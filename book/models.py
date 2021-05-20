@@ -1,6 +1,6 @@
 from django.db import models
 
-class Book(models.Model):
+class Schedule(models.Model):
     SCHEDULE_TYPES = (
         ("A1", '교양선택'),
         ("B1", '인성필수'),
