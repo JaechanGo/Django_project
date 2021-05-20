@@ -6,7 +6,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    url(r'^books/$', views.book_list, name='book_list'),
+    url(r'^books/$', views.schedule_list, name='schedule_list'),
     #url(r'^books/create/$', views.book_create, name='book_create'),
     url(r'^books/create/$', views.book_create, name='book_create'),
     url(r'^books/(?P<pk>\d+)/update/$', views.book_update, name='book_update'),

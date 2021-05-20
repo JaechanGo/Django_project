@@ -9,12 +9,12 @@ from book.forms import BookForm
 def index(request):
     return render(request, 'index.html')
 
-def book_list(request):
+def schedule_list(request):
     context = {}
     books = Book.objects.filter().order_by('-id')[:7]
 
     context['books'] = books
-    return render(request, 'book_list.html', context)
+    return render(request, 'schedule_list.html', context)
 
 
 def save_book_form(request, form, template_name):
@@ -27,7 +27,7 @@ def save_book_form(request, form, template_name):
             form.save()
             data['form_is_valid'] = True
             books = Book.objects.all().order_by('-id')[:7]
-            data['html_book_list'] = render_to_string('includes/partial_book_list.html', {
+            data['html_schedule_list'] = render_to_string('includes/partial_schedule_list.html', {
                 'books': books
             })
         else:
@@ -47,7 +47,7 @@ def book_create(request):
     print("Book form")
     print(form)
 
-    return save_book_form(request, form, 'includes/partial_book_create.html')
+    return save_book_form(request, form, 'includes/partial_schedule_create.html')
 
 
 def book_update(request, pk):
@@ -57,7 +57,7 @@ def book_update(request, pk):
     else:
         form = BookForm(instance=book)
 
-    return save_book_form(request, form, 'includes/partial_book_update.html')
+    return save_book_form(request, form, 'includes/partial_schedule_update.html')
 
 def book_delete(request, pk):
     book = get_object_or_404(Book, pk=pk)
@@ -66,11 +66,11 @@ def book_delete(request, pk):
         book.delete()
         data['form_is_valid'] = True
         books = Book.objects.all()
-        data['html_book_list'] = render_to_string('includes/partial_book_list.html', {
+        data['html_schedule_list'] = render_to_string('includes/partial_schedule_list.html', {
             'books': books
         })
     else:
         context = {'book': book}
-        data['html_form'] = render_to_string('includes/partial_book_delete.html', context, request=request)
+        data['html_form'] = render_to_string('includes/partial_schedule_delete.html', context, request=request)
 
     return JsonResponse(data)

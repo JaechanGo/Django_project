@@ -7,7 +7,12 @@
     </button>
   </div>
   <div class="modal-body">
-    <p class="lead">삭제 하시겠습니까 <strong>{{ book.title }}</strong></p>
+    <p class="lead">삭제 하시겠습니까?
+      <br>
+      <br>
+      수업명 : <strong>{{ book.title }}</strong><br>
+      교수님명 : <strong>{{ book.professor }}</strong><br>
+      메모 내용 : <strong>{{ book.meo }}</strong></p>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>

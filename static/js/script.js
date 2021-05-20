@@ -24,7 +24,7 @@ $(document).ready(function(){
           dataType: 'json',
           success: function (data) {
             if (data.form_is_valid) {
-              $("#book-table tbody").html(data.html_book_list);
+              $("#book-table tbody").html(data.html_schedule_list);
               $("#modal-book").modal("hide");
             }
             else {
