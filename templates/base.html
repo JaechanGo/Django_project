@@ -3,19 +3,17 @@
 <head>
     {% load static %}
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Django CRUD using Ajax</title>
+    <title>Django 스케쥴 CRUD</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
-    <script>
-
-    </script>
-
 </head>
 <body>
 
-<div class="container">
+<div style="margin:0px 5% 0px 5%;">
 
-    <div class="col-md-12 well">
+    <div>
         <a class="navbar-brand" style="color:black;" href="/">HOME</a>
+        <a class="navbar-brand schedules" style="color:black; display:inline;" href="schedules"> 수업 스케줄</a>
+    </div>
         <h3 class="text-primary">Django로 스케줄 조회.등록.수정.삭제 (CRUD)</h3>
         <hr style="border-top:1px dotted #ccc;" />
         {% block content %}

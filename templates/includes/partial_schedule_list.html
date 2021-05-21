@@ -6,7 +6,7 @@
         <td>{{ book.professor }}</td>
         <td>{{ book.grade }}</td>
         <td>{{ book.meo }}</td>
-        <td>{{ book.schedule_type_display }}</td>
+        <td>{{ book.get_schedule_type_display }}</td>
         <td style="width:150px;">
             <button type="button"
                     class="btn btn-warning btn-sm js-update-book"
@@ -22,6 +22,6 @@
     </tr>
 {% empty %}
     <tr>
-        <td colapsn="8" class="text-centr bg-warning">No book</td>
+        <td colspan="8" class="text-centr bg-warning">No Schedule, Pleas add schedule</td>
     </tr>
 {% endfor %}
