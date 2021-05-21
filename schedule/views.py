@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 
-from book.models import Schedule
-from book.forms import ScheduleForm
+from schedule.models import Schedule
+from schedule.forms import ScheduleForm
 
 def index(request):
     return render(request, 'index.html')
