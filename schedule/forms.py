@@ -1,5 +1,5 @@
 from django import forms
-from book.models import Schedule
+from schedule.models import Schedule
 
 class ScheduleForm(forms.ModelForm):
     class Meta:

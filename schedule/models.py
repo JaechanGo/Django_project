@@ -12,7 +12,7 @@ class Schedule(models.Model):
     professor = models.CharField(max_length=30, blank=True)
     grade = models.DecimalField(max_digits=5, decimal_places=2)
     meo = models.CharField(max_length=500, blank=True)
-    schedule_type = models.CharField(choices=SCHEDULE_TYPES,max_length=20)
+    schedule_type = models.CharField(choices=SCHEDULE_TYPES, max_length=30)
 
     class Meta:
         db_table = "django"
