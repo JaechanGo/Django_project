@@ -10,18 +10,18 @@
         <td style="width:150px;">
             <button type="button"
                     class="btn btn-warning btn-sm js-update-book"
-                    data-url="{% url 'book_update' book.id %}">
+                    data-url="{% url 'schedule_update' book.id %}">
                 <span class="glyphicon-pencil"></span> 수정
             </button>
             <button type="button"
                   class="btn btn-danger btn-sm js-delete-book"
-                  data-url="{% url 'book_delete' book.id %}">
+                  data-url="{% url 'schedule_delete' book.id %}">
             <span class="glyphicon glyphicon-trash"></span> 삭제
             </button>
         </td>
     </tr>
 {% empty %}
     <tr>
-        <td colspan="8" class="text-centr bg-warning">No Schedule, Pleas add schedule</td>
+        <td colapsn="8" class="text-centr bg-warning">No book</td>
     </tr>
 {% endfor %}

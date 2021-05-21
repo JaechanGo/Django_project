@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'schedule',
+    'book',
     'widget_tweaks',    #pip install django-widget-tweaks
 ]
 

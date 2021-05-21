@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 
-from schedule.models import Schedule
-from schedule.forms import ScheduleForm
+from book.models import Schedule
+from book.forms import ScheduleForm
 
 def index(request):
     return render(request, 'index.html')
@@ -38,7 +38,7 @@ def save_book_form(request, form, template_name):
     return JsonResponse(data)
 
 
-def book_create(request):
+def schedule_create(request):
     if request.method == 'POST':
         form = ScheduleForm(request.POST)
     else:
@@ -50,7 +50,7 @@ def book_create(request):
     return save_book_form(request, form, 'includes/partial_schedule_create.html')
 
 
-def book_update(request, pk):
+def schedule_update(request, pk):
     book = get_object_or_404(Schedule, pk=pk)
     if request.method == 'POST':
         form = ScheduleForm(request.POST, instance=book)
@@ -59,7 +59,7 @@ def book_update(request, pk):
 
     return save_book_form(request, form, 'includes/partial_schedule_update.html')
 
-def book_delete(request, pk):
+def schedule_delete(request, pk):
     book = get_object_or_404(Schedule, pk=pk)
     data = dict()
     if request.method == 'POST':
@@ -70,7 +70,7 @@ def book_delete(request, pk):
             'schedules': schedules
         })
     else:
-        context = {'schedule': book}
+        context = {'book': book}
         data['html_form'] = render_to_string('includes/partial_schedule_delete.html', context, request=request)
 
     return JsonResponse(data)
