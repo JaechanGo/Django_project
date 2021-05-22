@@ -1,27 +1,27 @@
-{% for book in schedules %}
+{% for schedule in schedules %}
     <tr>
-        <td>{{ book.id }}</td>
-        <td>{{ book.title }}</td>
-        <td>{{ book.date }}</td>
-        <td>{{ book.professor }}</td>
-        <td>{{ book.grade }}</td>
-        <td>{{ book.meo }}</td>
-        <td>{{ book.get_schedule_type_display }}</td>
+        <td>{{ schedule.id }}</td>
+        <td>{{ schedule.title }}</td>
+        <td>{{ schedule.date }}</td>
+        <td>{{ schedule.professor }}</td>
+        <td>{{ schedule.grade }}</td>
+        <td>{{ schedule.meo }}</td>
+        <td>{{ schedule.get_schedule_type_display }}</td>
         <td style="width:150px;">
             <button type="button"
                     class="btn btn-warning btn-sm js-update-book"
-                    data-url="{% url 'schedule_update' book.id %}">
+                    data-url="{% url 'schedule_update' schedule.id %}">
                 <span class="glyphicon-pencil"></span> 수정
             </button>
             <button type="button"
                   class="btn btn-danger btn-sm js-delete-book"
-                  data-url="{% url 'schedule_delete' book.id %}">
+                  data-url="{% url 'schedule_delete' schedule.id %}">
             <span class="glyphicon glyphicon-trash"></span> 삭제
             </button>
         </td>
     </tr>
 {% empty %}
     <tr>
-        <td colapsn="8" class="text-centr bg-warning">No book</td>
+        <td colapsn="8" class="text-centr bg-warning">No Schedule</td>
     </tr>
 {% endfor %}

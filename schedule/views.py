@@ -51,26 +51,26 @@ def schedule_create(request):
 
 
 def schedule_update(request, pk):
-    book = get_object_or_404(Schedule, pk=pk)
+    schedule = get_object_or_404(Schedule, pk=pk)
     if request.method == 'POST':
-        form = ScheduleForm(request.POST, instance=book)
+        form = ScheduleForm(request.POST, instance=schedule)
     else:
-        form = ScheduleForm(instance=book)
+        form = ScheduleForm(instance=schedule)
 
     return save_book_form(request, form, 'includes/partial_schedule_update.html')
 
 def schedule_delete(request, pk):
-    book = get_object_or_404(Schedule, pk=pk)
+    schedule = get_object_or_404(Schedule, pk=pk)
     data = dict()
     if request.method == 'POST':
-        book.delete()
+        schedule.delete()
         data['form_is_valid'] = True
         schedules = Schedule.objects.all()
         data['html_schedule_list'] = render_to_string('includes/partial_schedule_list.html', {
             'schedules': schedules
         })
     else:
-        context = {'book': book}
+        context = {'schedule': schedule}
         data['html_form'] = render_to_string('includes/partial_schedule_delete.html', context, request=request)
 
     return JsonResponse(data)

@@ -1,10 +1,35 @@
-{% extends 'base.html' %}
+{% extends 'nav.html' %}
 
 {% block content %}
-<h2 class="page-header">수업 스케줄 데이터베이스를 이용한 조회.등록.수정.삭제</h2> <!--Ajax-->
+<!--<h2 class="page-header">수업 스케줄 데이터베이스를 이용한 조회.등록.수정.삭제</h2> &lt;!&ndash;Ajax&ndash;&gt;-->
 
-<div>
-<span class="lead" style="margin-right:20px;">
-    <a href="schedules"><button class="btn btn-primary">수업 스케줄</button></a></span>
+<!--내용 -->
+<br>
+<div style="float:right;">
+<h2>과목명 : 소프트웨어 개발 실습</h2>
+<h2>교수님명 : 고광만 </h2>
+<h2>학번 : 201678004</h2>
+<h2>이름 : 고재찬 </h2>
 </div>
+<p>
+    현재 페이지는 소프트웨어 개발실습 과목의 Djago와 파이썬을 활용한 웹페이지 예시입니다.<br>
+    Django는 파이썬을 기반으로 한 웹 프레임워크로, 파이썬에 사용 가능한 모든 동작이 수행될 수 있습니다.<br>
+    즉, 웹과 파이썬의 적절한 조합으로 최적화된 라이브러리를 사용할 수 있습니다.<br>
+    <br>
+    이번 결과물의 주제로, 데이터베이스를 연동하여 간단한 수업 스케줄에 관한 CRUD 예제를 작성/개발 하였습니다.<br>
+    'CRUD'란 컴퓨터 소프트웨어가 가지는 기본적인 데이터 기능인<br>
+    Create(생성), Read(읽기), Update(갱신), Delete(삭제) 를 묶어서 일컫는 단어<br>
+    데이터베이스 테이블을 models.py에 클래스로 작성하여 작업량을 줄일 수 있었습니다.<br>
+    <br>
+<h2>Ver.</h2>
+<h3>파이썬 = 3.8<br></h3>
+<h3>Django = 3.2.3</h3>
+<h3>Mysql =  8.0.23 for osx10.16 on x86_64 </h3>
+
+</p>
+<a class="navbar-brand" style="color:black;" href="schedules"><button class="btn btn-primary">수업 스케줄 &raquo;</button></a>
+<br>
+<hr>
+
+
 {% endblock %}

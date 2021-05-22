@@ -1,4 +1,4 @@
-<form method="post" action="{% url 'schedule_delete' book.id %}" class="js-book-delete-form">
+<form method="post" action="{% url 'schedule_delete' schedule.id %}" class="js-book-delete-form">
   {% csrf_token %}
   <div class="modal-header">
     <h4 class="modal-title">삭제 확인</h4>
@@ -10,9 +10,9 @@
     <p class="lead">삭제 하시겠습니까?
       <br>
       <br>
-      수업명 : <strong>{{ book.title }}</strong><br>
-      교수님명 : <strong>{{ book.professor }}</strong><br>
-      메모 내용 : <strong>{{ book.meo }}</strong></p>
+      수업명 : <strong>{{ schedule.title }}</strong><br>
+      교수님명 : <strong>{{ schedule.professor }}</strong><br>
+      메모 내용 : <strong>{{ schedule.meo }}</strong></p>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
