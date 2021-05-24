@@ -4,7 +4,7 @@ class Schedule(models.Model):
     SCHEDULE_TYPES = (
         ("A1", '교양선택'),
         ("B1", '인성필수'),
-        ("C1`", '전공선택'),
+        ("C1", '전공선택'),
         ("C2", '전공필수'),
     )
     title = models.CharField(max_length=50)
