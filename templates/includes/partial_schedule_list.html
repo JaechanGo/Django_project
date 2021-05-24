@@ -2,7 +2,7 @@
     <tr>
         <td>{{ schedule.id }}</td>
         <td>{{ schedule.title }}</td>
-        <td>{{ schedule.date }}</td>
+        <td style="margin:0px;">{{ schedule.date }}</td>
         <td>{{ schedule.professor }}</td>
         <td>{{ schedule.grade }}</td>
         <td>{{ schedule.meo }}</td>
@@ -22,6 +22,6 @@
     </tr>
 {% empty %}
     <tr>
-        <td colapsn="8" class="text-centr bg-warning">No Schedule</td>
+        <td colspan="8" class="text-centr bg-warning">No Schedule</td>
     </tr>
 {% endfor %}
