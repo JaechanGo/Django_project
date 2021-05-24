@@ -3,24 +3,24 @@
 {% load static %}
 
 {% block content %}
-  <h1 class="page-header">수업 스케줄</h1>
+  <h1 class="page-header">수업 스케줄 &raquo; </h1>
   <p>
     <button type="button" class="btn btn-primary js-create-book" data-url="{% url 'schedule_create' %}">
       <span class="glyphicon glyphicon-plus"></span>
-       등록
+       등록 &nbsp;&raquo;
     </button>
   </p>
-  <table class="table" id="book-table">
+  <table class="table" id="book-table" >
     <thead>
       <tr>
-        <th style="width:1%;">Num</th>
-        <th style="width:8%;">수업명</th>
-        <th style="width:8%;">날짜</th>
-        <th style="width:5%;">교수명</th>
-        <th style="width:3%;">학점</th>
-        <th style="width:40%;">내용</th>
-        <th style="width:6%;">분류</th>
-        <th style="width:10%;"></th>
+        <th style="width:1%; margin-left:0px;">Num</th>
+        <th style="width:14%; margin-left:0px;">수업명</th>
+        <th>날짜</th>
+        <th>교수명</th>
+        <th style="width:3%; margin-left:0px;">학점</th>
+        <th style="width:40%; margin-left:0px;">내용</th>
+        <th>분류</th>
+        <th style="width:10%; margin-left:0px;"></th>
       </tr>
     </thead>
     <tbody>
@@ -33,7 +33,19 @@
       </div>
     </div>
   </div>
+<div style="width:111.1%; margin-left : -72px; margin-top:310px;">
+        <footer class="container-fluid" style="background-color: #000000;">
+        <br>
+        <div class='row'>
+            <div class="col-sm-11" style="text-align: left">
+                <p style="color: #ffffff">Copyright ⓒ 2021 소프트웨어개발실습. software development and Practice @ </p>
+                <p style="color: #ffffff">상지대학교 융합기술공과대학 컴퓨터공학과 201678004 고재찬.  </p>
+            </div>
+        </div>
+        </footer>
+</div>
 {% endblock %}
+
 
 {% block javascript %}
   <script src="{% static 'js/script.js' %}"></script>
